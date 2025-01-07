@@ -1,6 +1,5 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "path";
-import { IpcChannels } from "./models/ipc.models.js";
 
 app.on("ready", () => {
     const mainWindow = new BrowserWindow({
@@ -10,7 +9,6 @@ app.on("ready", () => {
         }
     });
     mainWindow.loadFile(path.join(app.getAppPath(), "dist-react", "index.html"));
-    mainWindow.webContents.openDevTools(); // Remove for production
 });
 
-ipcMain.handle(IpcChannels.CHANNEL1, async () => "message received by the main process");
+ipcMain.handle('ch', async () => "message received by the main process");

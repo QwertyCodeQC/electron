@@ -2,6 +2,7 @@
     "compilerOptions": {
         "composite": true,
         "declaration": true,
+        "lib": ["ESNext"],
         "allowSyntheticDefaultImports": true, // if esModuleInterop is set to true, this property is automatically true
         "esModuleInterop": true,
         "module": "NodeNext", // tell TypeScript to require ESM Syntax as input ( includin .js file imports) when we write our code
