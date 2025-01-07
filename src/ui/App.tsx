@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import React from "react";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     const handleClick = () => {
         setCount((count) => count + 1);
         const message = "hello from renderer";
-        console.log(window.key1.sendMessage(message));
+        console.log(window.api.sendMessage(message));
     };
 
     return (
