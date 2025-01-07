@@ -7,6 +7,10 @@
 // IMPORTANT: If you change this file, remember to update the src/ui/types.d.ts file.
 
 import { contextBridge } from "electron";
-import { simpleMessageApi } from "./apis/ipc.api.js";
 
-contextBridge.exposeInMainWorld('api', simpleMessageApi);
+contextBridge.exposeInMainWorld('api', {
+    // Add your APIs here
+    // For example:
+    // electron: require('electron'),
+    // fs: require('fs'),
+});

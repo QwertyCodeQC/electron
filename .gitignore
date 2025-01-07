@@ -28,4 +28,5 @@ dist-ssr
 *.sw?
 
 # Otros
+yarn.lock
 package-lock.json
