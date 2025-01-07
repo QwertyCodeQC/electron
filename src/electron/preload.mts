@@ -7,10 +7,12 @@
 // IMPORTANT: If you change this file, remember to update the src/ui/types.d.ts file.
 
 import { contextBridge } from "electron";
+import { ipcRenderer } from "electron";
 
 contextBridge.exposeInMainWorld('api', {
-    // Add your APIs here
-    // For example:
-    // electron: require('electron'),
-    // fs: require('fs'),
+    sendMessage: (message: string) => {
+        console.log(message);
+        ipcRenderer.invoke('ch')
+        return message;
+    }
 });

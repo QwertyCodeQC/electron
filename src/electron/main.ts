@@ -11,4 +11,7 @@ app.on("ready", () => {
     mainWindow.loadFile(path.join(app.getAppPath(), "dist-react", "index.html"));
 });
 
-ipcMain.handle('ch', async () => "message received by the main process");
+ipcMain.handle('ch', async () => {
+    console.log('hello from main');
+    return 'hello from main';
+});
